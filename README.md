@@ -17,6 +17,23 @@ creates new branch
 git checkout (branch name)
 moves to that branch
 
+git checkout -b (branch name)
+creates new branch and moves to that branch
+
+-- now u can make changes.
 
 
 How to set-up Backend?
+
+After cloning this repo 
+install golang version go 1.23.4 
+now open terminal and run 
+go mod init mentor_hub-api
+go mod tidy   
+this will install required modules
+
+go run main.go
+will run the server
+
+
+---- Done By Akash Anumolu
