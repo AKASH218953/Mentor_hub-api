@@ -19,16 +19,16 @@ type Student struct {
 	Id                 primitive.ObjectID  `json:"student_id"`
 	UserId             primitive.ObjectID  `json:"user_id"`
 	SubjectsOfInterest []string            `json:"subjects_of_interest"`
-	MentorId           *primitive.ObjectID `json:"mentor_id,omitempty"` // Linked mentor ID, null until assigned
+	MentorId           *primitive.ObjectID `json:"mentor_id,omitempty"` 
 	College_Details    ClgDetails          `json:"collegeDetails"`
 }
 
 type ClgDetails struct {
 	CollegeName     string              `json:"college_name"`
-	CollegeId       *primitive.ObjectID `json:"college_id,omitempty"` // Optional if colleges are predefined in DB
-	Degree          string              `json:"degree"`               // e.g., B.Tech, B.Sc
-	Branch          string              `json:"branch"`               // e.g., Computer Science
-	YearOfStudy     int                 `json:"year_of_study"`        // 1, 2, 3, 4, etc.
+	CollegeId       *primitive.ObjectID `json:"college_id,omitempty"` 
+	Degree          string              `json:"degree"`               
+	Branch          string              `json:"branch"`               
+	YearOfStudy     int                 `json:"year_of_study"`      
 	RollNumber      string              `json:"roll_number"`
 	CollegeLocation string              `json:"college_location"`
 	GraduationYear  int                 `json:"graduation_year"`
@@ -52,9 +52,9 @@ type Mentor struct {
 
 type CompanyDetails struct {
 	CompanyName     string              `json:"company_name"`
-	CompanyId       *primitive.ObjectID `json:"company_id,omitempty"` // Optional for predefined companies
-	Position        string              `json:"position"`             // e.g., "Software Engineer", "Manager"
-	Department      string              `json:"department"`           // e.g., "IT", "HR"
-	YearsInCompany  int                 `json:"years_in_company"`     // Years of experience in the current company
-	CompanyLocation string              `json:"company_location"`     // e.g., "Mumbai, India"
+	CompanyId       *primitive.ObjectID `json:"company_id,omitempty"` 
+	Position        string              `json:"position"`            
+	Department      string              `json:"department"`         
+	YearsInCompany  int                 `json:"years_in_company"`   
+	CompanyLocation string              `json:"company_location"`    
 }
